@@ -11,7 +11,8 @@ import * as fs from 'fs-extra';
 // Add routes manually that you need rendered
 const ROUTES = [
   '/',
-  '/lazy'
+  '/lazy',
+  '/lazy/nested'
 ];
 
 const APP_NAME = 'repro-app';
