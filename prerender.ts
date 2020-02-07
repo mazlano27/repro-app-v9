@@ -6,10 +6,6 @@ import {join, resolve} from 'path';
 
 import {enableProdMode} from '@angular/core';
 
-// Import module map for lazy loading
-import {provideModuleMap} from '@nguniversal/module-map-ngfactory-loader';
-import {renderModuleFactory} from '@angular/platform-server';
-
 import * as fs from 'fs-extra';
 
 // Add routes manually that you need rendered
@@ -22,8 +18,8 @@ const APP_NAME = 'repro-app';
 
 // leave this as require(), imported via webpack
 const {
-  AppServerModuleNgFactory,
-  LAZY_MODULE_MAP
+  AppServerModule,
+  renderModule
 } = require(`./dist/${APP_NAME}-server/main`);
 
 enableProdMode();
@@ -41,10 +37,9 @@ async function prerender() {
     await fs.ensureDir(pageDir);
 
     // Render with Universal
-    const html = await renderModuleFactory(AppServerModuleNgFactory, {
+    const html = await renderModule(AppServerModule, {
       document: index,
       url: route,
-      extraProviders: [provideModuleMap(LAZY_MODULE_MAP)]
     });
 
     await fs.writeFile(join(pageDir, 'index.html'), html);
