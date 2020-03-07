@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kims-brownies": {
+      "hosting": {
+        "repro-app": [
+          "kims-brownies"
+        ]
+      }
+    }
+  }
+}

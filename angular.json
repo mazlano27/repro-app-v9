@@ -131,6 +131,10 @@
               "optimization": true
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
