@@ -8,7 +8,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-// import 'firebase/firestore';
 
 const material = [
   MatButtonModule
