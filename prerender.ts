@@ -4,6 +4,9 @@ import 'reflect-metadata';
 
 import {join, resolve} from 'path';
 
+(global as any).WebSocket = require('ws');
+(global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+
 import {enableProdMode} from '@angular/core';
 
 import * as fs from 'fs-extra';
