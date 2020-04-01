@@ -8,9 +8,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const material = [
-  MatButtonModule
+  MatButtonModule,
+  MatSnackBarModule
 ];
 
 @NgModule({
@@ -24,6 +27,7 @@ const material = [
     BrowserTransferStateModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     ...material
   ],
   providers: [],
