@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyCK86UUa3n6RCs4lvmXTv6voQuOgBOkrhE',
-    authDomain: 'kims-brownies.firebaseapp.com',
-    databaseURL: 'https://kims-brownies.firebaseio.com',
-    projectId: 'kims-brownies',
-    storageBucket: 'kims-brownies.appspot.com',
-    messagingSenderId: '580704509458',
-    appId: '1:580704509458:web:72f489f894548e1f3ec2cb',
-    measurementId: 'G-Q21SFLCVK0'
+    apiKey: 'AIzaSyA7CNE9aHbcSEbt9y03QReJ-Xr0nwKg7Yg',
+    authDomain: 'aftest-94085.firebaseapp.com',
+    databaseURL: 'https://aftest-94085.firebaseio.com',
+    projectId: 'aftest-94085',
+    storageBucket: 'aftest-94085.appspot.com',
+    messagingSenderId: '480362569154',
+    appId: '1:480362569154:web:2fe6f75104cdfb82f50a5b',
+    measurementId: 'G-CBRYER9PJR'
   }
 };
